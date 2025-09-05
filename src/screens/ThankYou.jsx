@@ -29,15 +29,10 @@ function ThankYou({ responses, respondentId, onReset }) {
       
       console.log('Survey data:', data)
       
-      // Get API URL from environment variable or use a placeholder
-      const apiUrl = import.meta.env.VITE_GOOGLE_SHEETS_API_URL || 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE'
+      // Get API URL from environment variable (for dev) or use production URL (for GitHub Pages)
+      const apiUrl = import.meta.env.VITE_GOOGLE_SHEETS_API_URL || 'https://script.google.com/macros/s/AKfycbw5qsCTpDDkrX1NHbgGS5NB_aTrDnuJRHbllKlP6IDKSCjgQ3B1M_lTM9hs5Ami9HLd/exec'
       
-      // Skip submission if API URL is not configured
-      if (apiUrl === 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
-        console.warn('Google Sheets API URL not configured. Data logged to console only.')
-        setSubmissionStatus('success')
-        return
-      }
+      // API URL is now always configured, no need to skip
       
       try {
         const response = await fetch(apiUrl, {
