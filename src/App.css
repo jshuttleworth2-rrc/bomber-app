@@ -85,7 +85,8 @@ h2 {
 .info-text {
   text-align: center;
   font-size: 1.1em;
-  color: #333;
+  color: var(--bomber-blue);
+  font-weight: bold;
   margin: 20px 0;
   padding: 0 20px;
   line-height: 1.5;
@@ -297,6 +298,14 @@ h2 {
   text-align: center;
   margin: 20px 0;
   line-height: 1.5;
+}
+
+.submitting-text {
+  font-size: 1.4em;
+  color: var(--bomber-blue);
+  font-weight: bold;
+  text-align: center;
+  margin: 30px 0 40px 0;
 }
 
 @media (max-width: 768px) {

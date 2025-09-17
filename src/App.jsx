@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Welcome from './screens/Welcome'
 import FoodRating from './screens/FoodRating'
 import Comments from './screens/Comments'

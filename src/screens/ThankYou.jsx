@@ -77,7 +77,7 @@ function ThankYou({ responses, respondentId, onReset }) {
       <div className="go-bombers">GO BOMBERS! 🏈🎊</div>
       
       {submissionStatus === 'submitting' && (
-        <p style={{ textAlign: 'center', color: '#666', marginTop: '20px' }}>
+        <p className="submitting-text">
           Submitting your feedback...
         </p>
       )}
