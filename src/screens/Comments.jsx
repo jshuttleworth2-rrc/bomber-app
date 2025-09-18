@@ -26,7 +26,7 @@ function Comments({ responses }) {
         onChange={(e) => setComment(e.target.value)}
       />
       
-      <img src={footballIcon} alt="Football" className="football-icon" />
+      <img src={footballIcon} alt="Football" className="comments-football-icon" />
       
       <button className="btn-primary" onClick={handleSubmit}>
         Submit Survey
