@@ -1,32 +1,10 @@
-import { useNavigate } from 'react-router-dom'
-import { useEffect } from 'react'
-import wingsImg from '../assets/wings.png'
-import chickenFingersImg from '../assets/chicken_fingers.png'
-import springRollsImg from '../assets/spring_rolls.png'
-import slidersImg from '../assets/sliders.png'
-import fruitVeggieImg from '../assets/fruit_veg.png'
-import samosasImg from '../assets/samosas.png'
-import popcornImg from '../assets/popcorn.png'
-import perogiesImg from '../assets/perogies.png'
-import chipsDipImg from '../assets/chip_dip.png'
-import pizzaImg from '../assets/pizza.png'
-
-const foodImages = {
-  wings: wingsImg,
-  chicken_fingers: chickenFingersImg,
-  spring_rolls: springRollsImg,
-  sliders: slidersImg,
-  fruit_veggie: fruitVeggieImg,
-  samosas: samosasImg,
-  popcorn: popcornImg,
-  perogies: perogiesImg,
-  chips_dip: chipsDipImg,
-  pizza: pizzaImg
-}
+import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
+import { getFoodImage } from '../constants/foods';
 
 function FoodRating({ food, foodIndex, totalFoods, onRate, responses }) {
-  const navigate = useNavigate()
-  const currentRating = responses[food.id]
+  const navigate = useNavigate();
+  const currentRating = responses[food.id];
 
   const handleRating = (rating) => {
     onRate(food.id, rating)
@@ -62,30 +40,30 @@ function FoodRating({ food, foodIndex, totalFoods, onRate, responses }) {
   return (
     <div className="screen">
       <h2 className="food-question">How do you feel about...</h2>
-      
+
       <div className="food-card">
         <h3 className="food-title">{food.displayName}</h3>
-        <img 
-          src={foodImages[food.id]} 
+        <img
+          src={getFoodImage(food.id)}
           alt={food.displayName}
           className="food-image"
         />
         <div className="emoji-buttons">
-          <button 
+          <button
             className={getButtonClass('😍')}
             onClick={() => handleRating('😍')}
           >
             <span className="emoji">😍</span>
             <span className="emoji-label">Love</span>
           </button>
-          <button 
+          <button
             className={getButtonClass('😐')}
             onClick={() => handleRating('😐')}
           >
             <span className="emoji">😐</span>
             <span className="emoji-label">OK</span>
           </button>
-          <button 
+          <button
             className={getButtonClass('🤢')}
             onClick={() => handleRating('🤢')}
           >
@@ -105,7 +83,7 @@ function FoodRating({ food, foodIndex, totalFoods, onRate, responses }) {
         {foodIndex + 1} of {totalFoods}
       </p>
     </div>
-  )
+  );
 }
 
-export default FoodRating
+export default FoodRating;

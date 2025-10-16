@@ -286,6 +286,11 @@ h2 {
   box-shadow: 0 0 0 3px rgba(0, 71, 171, 0.1);
 }
 
+/* Name Input - Same styling as comment input */
+.name-input {
+  min-height: 150px;
+}
+
 .celebration-icon {
   width: 120px;
   height: 120px;
@@ -313,6 +318,49 @@ h2 {
   font-weight: bold;
   text-align: center;
   margin: 15px 0 25px 0;
+}
+
+/* Welcome and Thank You Screen Container with Positioned Buttons */
+.welcome-screen-container,
+.thankyou-screen-container {
+  position: relative;
+}
+
+/* Admin and Game Over Buttons */
+.btn-admin,
+.btn-game-over {
+  position: absolute;
+  background-color: #e0e0e0;
+  color: #424242;
+  font-size: 0.9em;
+  font-weight: bold;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+  z-index: 10;
+}
+
+.btn-admin {
+  top: 40px;
+  left: 20px;
+}
+
+.btn-game-over {
+  bottom: 40px;
+  left: 20px;
+}
+
+.btn-admin:hover,
+.btn-game-over:hover {
+  background-color: #d0d0d0;
+  transform: scale(1.05);
+}
+
+.btn-admin:active,
+.btn-game-over:active {
+  transform: scale(0.95);
 }
 
 @media (max-width: 768px) {
