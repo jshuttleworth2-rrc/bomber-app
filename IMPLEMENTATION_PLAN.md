@@ -1218,39 +1218,39 @@ function formatHeaders(sheet, numColumns) {
 ## Implementation Checklist
 
 ### Phase 1: Setup & Foundation
-- [ ] Create `new-features` branch from `main`
+- [x] Create `new-features` branch from `main`
 - [ ] Create new Google Sheet "Bomber Food Survey V2"
 - [ ] Deploy Google Apps Script v2
-- [ ] Update `.env` with new API URL
-- [ ] Create data structure constants file (`src/constants/foods.js`)
-- [ ] Create utility functions file (`src/utils/configManager.js`)
+- [x] Update `.env` with new API URL (placeholder added)
+- [x] Create data structure constants file (`src/constants/foods.js`)
+- [x] Create utility functions file (`src/utils/configManager.js`)
 
 ### Phase 2: Core Components
-- [ ] Create `PasswordPrompt.jsx` component
-- [ ] Create `ConfirmDialog.jsx` component
-- [ ] Create `AddCustomFood.jsx` component
-- [ ] Create `AdminEditPanel.jsx` component
+- [x] Create `PasswordPrompt.jsx` component
+- [x] Create `ConfirmDialog.jsx` component
+- [x] Create `AddCustomFood.jsx` component
+- [x] Create `AdminEditPanel.jsx` component
 
 ### Phase 3: New Screens
-- [ ] Create `Configure.jsx` screen
-- [ ] Create `LoadSurvey.jsx` screen
-- [ ] Create `CreateSurvey.jsx` screen
+- [x] Create `Configure.jsx` screen
+- [x] Create `LoadSurvey.jsx` screen
+- [x] Create `CreateSurvey.jsx` screen
 
 ### Phase 4: Modify Existing Screens
-- [ ] Modify `Welcome.jsx` - Add Admin and Game Over buttons
-- [ ] Modify `ThankYou.jsx` - Add Admin and Game Over buttons
-- [ ] Modify `Comments.jsx` - Add name input field
-- [ ] Modify `FoodRating.jsx` - Support dynamic food list
+- [x] Modify `Welcome.jsx` - Add Admin and Game Over buttons
+- [x] Modify `ThankYou.jsx` - Add Admin and Game Over buttons
+- [x] Modify `Comments.jsx` - Add name input field
+- [x] Modify `FoodRating.jsx` - Support dynamic food list
 
 ### Phase 5: State Management & Routing
 - [ ] Update `App.jsx` - Add new state variables
 - [ ] Update `App.jsx` - Add new routes
 - [ ] Update `App.jsx` - Add configuration management logic
-- [ ] Create localStorage manager utility
+- [x] Create localStorage manager utility (configManager.js)
 
 ### Phase 6: Google Sheets Integration
-- [ ] Update `ThankYou.jsx` - Submit to new Google Sheets API
-- [ ] Add config update API calls
+- [x] Update `ThankYou.jsx` - Submit to new Google Sheets API
+- [x] Add config update API calls (googleSheets.js utility)
 - [ ] Test dynamic column creation
 
 ### Phase 7: Testing
