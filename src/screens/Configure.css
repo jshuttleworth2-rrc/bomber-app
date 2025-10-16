@@ -1,0 +1,59 @@
+/* Configure Screen */
+.configure-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 40px 20px;
+}
+
+.configure-title {
+  font-size: 3em;
+  color: var(--bomber-blue);
+  text-align: center;
+  margin: 0;
+}
+
+.configure-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.btn-configure-primary {
+  background-color: var(--bomber-blue);
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 25px 40px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.btn-configure-primary:hover {
+  background-color: #003380;
+  transform: scale(1.02);
+}
+
+.btn-configure-primary:active {
+  transform: scale(0.98);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .configure-title {
+    font-size: 2.2em;
+  }
+
+  .btn-configure-primary {
+    font-size: 1.3em;
+    padding: 20px 30px;
+  }
+}

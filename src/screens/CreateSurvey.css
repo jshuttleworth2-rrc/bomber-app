@@ -1,0 +1,274 @@
+/* Create Survey Screen */
+.create-survey-screen {
+  padding: 30px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.create-survey-title {
+  color: var(--bomber-blue);
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Error Message */
+.create-error-message {
+  background-color: #ffebee;
+  color: #d32f2f;
+  padding: 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 25px;
+  border: 2px solid #d32f2f;
+}
+
+/* Form Container */
+.create-survey-form {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Sections */
+.form-section {
+  margin-bottom: 35px;
+}
+
+.form-label {
+  display: block;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: var(--bomber-blue);
+  margin-bottom: 12px;
+}
+
+.survey-name-input {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1em;
+  border: 2px solid var(--bomber-blue);
+  border-radius: 8px;
+  font-family: inherit;
+}
+
+.survey-name-input:focus {
+  outline: none;
+  border-color: #003380;
+  box-shadow: 0 0 0 3px rgba(0, 71, 171, 0.1);
+}
+
+.survey-name-input:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.form-hint {
+  color: #666;
+  font-size: 0.9em;
+  font-style: italic;
+  margin-top: 8px;
+}
+
+/* Section Headers */
+.section-header {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: var(--bomber-blue);
+  margin-bottom: 20px;
+}
+
+/* Subsections */
+.subsection {
+  margin-bottom: 25px;
+}
+
+.subsection-title {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+/* Food Selection List */
+.food-selection-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.food-selection-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  transition: all 0.2s;
+}
+
+.food-selection-item:hover {
+  background-color: #f0f0f0;
+  border-color: var(--bomber-blue);
+}
+
+.food-selection-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  flex: 1;
+}
+
+.food-checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: var(--bomber-blue);
+}
+
+.food-checkbox:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.food-name {
+  font-size: 1.05em;
+  color: #333;
+}
+
+.btn-remove-food {
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 1.5em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  transition: all 0.2s;
+}
+
+.btn-remove-food:hover:not(:disabled) {
+  background-color: #b71c1c;
+  transform: scale(1.1);
+}
+
+.btn-remove-food:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+.btn-remove-food:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 2px solid #e0e0e0;
+}
+
+.btn-form-primary,
+.btn-form-secondary {
+  flex: 1;
+  padding: 18px 30px;
+  font-size: 1.2em;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+}
+
+.btn-form-primary {
+  background-color: var(--bomber-blue);
+  color: white;
+}
+
+.btn-form-primary:hover:not(:disabled) {
+  background-color: #003380;
+  transform: scale(1.02);
+}
+
+.btn-form-primary:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.btn-form-primary:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-form-secondary {
+  background-color: #e0e0e0;
+  color: #424242;
+}
+
+.btn-form-secondary:hover {
+  background-color: #d0d0d0;
+  transform: scale(1.02);
+}
+
+.btn-form-secondary:active {
+  transform: scale(0.98);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .create-survey-screen {
+    padding: 20px 15px;
+  }
+
+  .create-survey-title {
+    font-size: 1.6em;
+  }
+
+  .create-survey-form {
+    padding: 20px;
+  }
+
+  .form-label {
+    font-size: 1.1em;
+  }
+
+  .section-header {
+    font-size: 1.2em;
+  }
+
+  .subsection-title {
+    font-size: 1em;
+  }
+
+  .food-selection-item {
+    padding: 10px 12px;
+  }
+
+  .food-name {
+    font-size: 1em;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .btn-form-primary,
+  .btn-form-secondary {
+    font-size: 1.1em;
+    padding: 15px 25px;
+  }
+}
